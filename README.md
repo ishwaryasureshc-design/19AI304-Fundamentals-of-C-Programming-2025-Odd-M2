@@ -56,7 +56,48 @@
 ### Step 11:
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    float math, science, english, avg;
+
+    scanf("%f %f %f", &math, &science, &english);
+
+    avg = (math + science + english) / 3.0;
+
+    printf("%.2f\n", avg);
+
+    if (avg >= 90.0)
+    {
+        printf("A");
+    }
+    else
+    {
+        if (avg >= 75.0)
+        {
+            printf("B");
+        }
+        else
+        {
+            if (avg >= 50.0)
+            {
+                printf("C");
+            }
+            else
+            {
+                printf("F");
+            }
+        }
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="994" height="441" alt="Screenshot 2026-07-17 141421" src="https://github.com/user-attachments/assets/ac10bc7c-9b44-4b90-bb32-ead2a5344032" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -88,7 +129,24 @@ Thus, the program was implemented and executed successfully, and the required ou
   Stop
 
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int number = 15, i;
+
+    for(i = 1; i <= 10; i++)
+    {
+        printf("%d x %d = %d\n", number, i, number * i);
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="1042" height="330" alt="Screenshot 2026-07-17 141704" src="https://github.com/user-attachments/assets/c6dde088-4f28-4aea-b3fa-d47ad6dc9cda" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -131,7 +189,42 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 7:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int n, i = 2, f = 0;
+
+    scanf("%d", &n);
+
+    if (n <= 1)
+    {
+        printf("Not Prime");
+        return 0;
+    }
+
+    while (i <= n - 1)
+    {
+        if (n % i == 0)
+        {
+            f = 1;
+            break;
+        }
+        i++;
+    }
+
+    if (f == 0)
+        printf("Prime");
+    else
+        printf("Not Prime");
+
+    return 0;
+}
+```
 # Output:
+<img width="1169" height="455" alt="Screenshot 2026-07-17 141847" src="https://github.com/user-attachments/assets/c45b89d1-bfca-4575-a80d-26d6f336148f" />
+
 # Result: 
 Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -179,7 +272,43 @@ Thus, the program was implemented and executed successfully, and the required ou
 ### Step 8:   
   Stop
 # Program:
+```
+#include <stdio.h>
+
+int main()
+{
+    int i, j, n = 5, k;
+
+    for(i = 1; i <= n; i++)
+    {
+        for(j = i; j <= n; j++)
+        {
+            if(i == 1 || j == i)
+                printf("%d", j);
+            else
+                printf(" ");
+        }
+
+        k = j - 2;
+
+        for(j = 1; j <= i - 1; j++)
+        {
+            if(i == n || j == i - 1)
+                printf("%d", k);
+            else
+                printf(" ");
+            k--;
+        }
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
 # Output:
+<img width="799" height="412" alt="Screenshot 2026-07-17 141932" src="https://github.com/user-attachments/assets/819dbf1c-bef7-46c1-bff9-20deccb88b66" />
+
 # Result: 
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
@@ -232,6 +361,35 @@ Thus, the program was implemented and executed successfully, and the required ou
   Decrease i by 1 and go back to Step 6.
 ### Step 8:
   Stop
+###input:
+```
+#include <stdio.h>
+
+int main()
+{
+    int i, j;
+
+    printf("0\n");
+
+    for(i = 7; i >= 1; i--)
+    {
+        for(j = i; j <= 7; j++)
+            printf("%d ", j);
+
+        printf("0 ");
+
+        for(j = 7; j >= i; j--)
+            printf("%d ", j);
+
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+###output:
+<img width="962" height="410" alt="Screenshot 2026-07-17 142003" src="https://github.com/user-attachments/assets/21ed825a-2361-42e9-9f7c-986ba11f940d" />
+
 # Result:
   Thus, the program was implemented and executed successfully, and the required output was obtained.
 
